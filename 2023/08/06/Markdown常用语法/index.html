@@ -15,10 +15,13 @@
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="一、Markdown简介Markdown 是一种轻量级标记语言，它允许人们使用易读易写的纯文本格式编写文档。 Markdown 语言在 2004 由约翰·格鲁伯（英语：John Gruber）创建。 Markdown 编写的文档可以导出 HTML 、Word、图像、PDF、Epub 等多种格式的文档。 Markdown 编写的文档后缀为 .md, .markdown。 Markdown 能被使用来">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://cdn.staticaly.com/gh/WangShiSuiFeng24/picx-images-hosting@master/20230807/image.1oqer6reup34.webp">
+<meta property="og:image" content="https://cdn.staticaly.com/gh/WangShiSuiFeng24/picx-images-hosting@master/20230807/image.1oqer6reup34.webp">
 <meta property="article:published_time" content="2023-08-06T12:58:46.000Z">
-<meta property="article:modified_time" content="2023-08-06T14:39:49.846Z">
+<meta property="article:modified_time" content="2023-08-07T00:31:19.299Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.staticaly.com/gh/WangShiSuiFeng24/picx-images-hosting@master/20230807/image.1oqer6reup34.webp">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -285,7 +288,160 @@
 </ul>
 </li>
 </ol>
-<h2 id="五、Markdown区块"><a href="#五、Markdown区块" class="headerlink" title="五、Markdown区块"></a>五、Markdown区块</h2>
+<h2 id="五、Markdown区块"><a href="#五、Markdown区块" class="headerlink" title="五、Markdown区块"></a>五、Markdown区块</h2><p>Markdown区块引用是在段落开头使用&gt;符号，然后后面紧跟一个空格符号。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt; 区块引用</span><br><span class="line">&gt; Markdown教程</span><br><span class="line">&gt; 学的不仅是技术更是梦想</span><br></pre></td></tr></table></figure>
+
+<p>显示效果如下：</p>
+<blockquote>
+<p>区块引用</p>
+</blockquote>
+<blockquote>
+<p>Markdown教程</p>
+</blockquote>
+<blockquote>
+<p>学的不仅是技术更是梦想</p>
+</blockquote>
+<p>另外区块是可以嵌套的，一个&gt;符号是最外层，两个符号是第一层嵌套，以此类推：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt; 最外层</span><br><span class="line">&gt;&gt; 第一层嵌套</span><br><span class="line">&gt;&gt;&gt; 第二层嵌套</span><br></pre></td></tr></table></figure>
+
+<p>显示效果如下：</p>
+<blockquote>
+<p>最外层</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>第一层嵌套</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>第二层嵌套</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p><strong>5.1 区块中使用列表</strong></p>
+<p>区块中使用列表实例如下：</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&gt; 区块中使用列表</span><br><span class="line">&gt; 1. 第一项</span><br><span class="line">&gt; 2. 第二项</span><br><span class="line">&gt; + 第一项</span><br><span class="line">&gt; + 第二项</span><br><span class="line">&gt; + 第三项</span><br></pre></td></tr></table></figure>
+
+<p>显示效果：</p>
+<blockquote>
+<p>区块中使用列表 1. 第一项 2. 第二项 + 第一项 + 第二项 + 第三项</p>
+</blockquote>
+<p><strong>5.2 列表中使用区块</strong></p>
+<p>如果要在列表项目内放进区块，那么就需要在&gt;前添加四个空格和缩进。</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">* 第一项</span><br><span class="line">    &gt; Markdown教程</span><br><span class="line">    &gt; 学的不仅是技术更是梦想</span><br><span class="line">* 第二项</span><br></pre></td></tr></table></figure>
+
+<p>显示效果如下：</p>
+<ul>
+<li>第一项 &gt; Markdown教程 &gt; 学的不仅是技术更是梦想</li>
+<li>第二项</li>
+</ul>
+<h2 id="六、Markdown代码框"><a href="#六、Markdown代码框" class="headerlink" title="六、Markdown代码框"></a>六、Markdown代码框</h2><p>如果是段落上的一个函数或片段的代码可以用两个&#96;把它包起来。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">`print()`函数</span><br></pre></td></tr></table></figure>
+
+<p><code>print()</code>函数</p>
+<p><strong>6.1 代码区块</strong></p>
+<p>代码区块使用4个空格或者一个制表符（Tab键）。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;?Python</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;Markdown&#x27;</span>)</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">test</span>():</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;Markdown test!&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>也可以用’’’包裹一段代码，并指定一种语言（也可以不指定）：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&#x27;&#x27;</span><span class="string">&#x27;javascript</span></span><br><span class="line"><span class="string">$(document).read(function()&#123;</span></span><br><span class="line"><span class="string">    alert(&#x27;</span><span class="title class_">Markdown</span><span class="string">&#x27;);</span></span><br><span class="line"><span class="string">&#125;);</span></span><br><span class="line"><span class="string">&#x27;</span><span class="string">&#x27;&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<p>显示效果：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&#x27;&#x27;</span><span class="string">&#x27;javascript</span></span><br><span class="line"><span class="string">$(document).read(function)&#123;</span></span><br><span class="line"><span class="string">    alert(&#x27;</span><span class="title class_">Markdown</span><span class="string">&#x27;);</span></span><br><span class="line"><span class="string">&#125;);</span></span><br><span class="line"><span class="string">&#x27;</span><span class="string">&#x27;&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="七、Markdown链接"><a href="#七、Markdown链接" class="headerlink" title="七、Markdown链接"></a>七、Markdown链接</h2><p>链接方法使用如下</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[链接名称](链接地址)</span><br><span class="line">或者</span><br><span class="line">&lt;链接地址&gt;</span><br></pre></td></tr></table></figure>
+
+<p>例如：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">这是一个链接 [新浪新闻](https://news.sina.com.cn/)</span><br><span class="line">&lt;https://news.sina.com.cn/&gt;</span><br></pre></td></tr></table></figure>
+
+<p>显示效果如下：</p>
+<p>这是一个链接 <a target="_blank" rel="noopener" href="https://news.sina.com.cn/">新浪新闻</a></p>
+<p><a target="_blank" rel="noopener" href="https://news.sina.com.cn/">https://news.sina.com.cn/</a></p>
+<p><strong>7.1 高级链接</strong></p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">链接也可以用变量来代替，文档末尾附带变量地址：</span><br><span class="line">这个链接用1作为网址变量[baidu][1]</span><br><span class="line">这个链接用markdown作为网址变量[Markdown][markdown]</span><br><span class="line">然后文档的结尾为变量赋值(网址)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[1]: http://www.baidu.com</span><br><span class="line">[markdown]: http://www.markdown.com</span><br></pre></td></tr></table></figure>
+
+<p>显示效果如下：</p>
+<p>链接也可以用变量来代替，文档末尾附带变量地址：<br>这个链接用1作为网址变量<a target="_blank" rel="noopener" href="http://www.baidu.com/">baidu</a><br>这个链接用markdown作为网址变量<a target="_blank" rel="noopener" href="http://www.markdown.com/">Markdown</a><br>然后文档的结尾为变量赋值(网址)</p>
+<h2 id="八、Markdown图片"><a href="#八、Markdown图片" class="headerlink" title="八、Markdown图片"></a>八、Markdown图片</h2><p>Markdown图片语法格式为：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">![alt 属性文本](图片地址)</span><br><span class="line">![alt 属性文本](图片地址 &quot;可选标题&quot;)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>开头一个感叹号！</li>
+<li>接着一个方括号，里面放上图片的代替文字</li>
+<li>接着一个普通括号，里面放上图片的网址，最后还可以用引号包住并加上选择性的‘title’属性文字。</li>
+</ul>
+<p>示例如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">![有问题上知乎 图标](https://cdn.staticaly.com/gh/WangShiSuiFeng24/picx-images-hosting@master/20230807/image.1oqer6reup34.webp）</span><br><span class="line"></span><br><span class="line">---</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>显示效果如下：</p>
+<p><img src="https://cdn.staticaly.com/gh/WangShiSuiFeng24/picx-images-hosting@master/20230807/image.1oqer6reup34.webp" alt="有问题上知乎 图标"></p>
+<p>也可以像网址那样对图片使用变量：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">这个图片链接用1作为网址变量[zhihu][1]</span><br><span class="line">然后在文档的结尾为变量赋值(网址)</span><br><span class="line">[1]:(https://cdn.staticaly.com/gh/WangShiSuiFeng24/picx-images-hosting@master/20230807/image.1oqer6reup34.webp)</span><br></pre></td></tr></table></figure>
+
+<p>显示效果如下：</p>
+<p>这个图片用1作为网址变量<a target="_blank" rel="noopener" href="http://www.baidu.com/">zhihu</a></p>
+<p>然后在文档的结尾为变量赋值(网址)</p>
+<p>Markdown 没有办法指定图片的高度与宽度，如果需要的话，可以使用普通的标签。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;img src=&quot;https://cdn.staticaly.com/gh/WangShiSuiFeng24/picx-images-hosting@master/20230807/image.1oqer6reup34.webp&quot; width=10%&gt;</span><br></pre></td></tr></table></figure>
+
+<p>显示效果：</p>
+<img src="https://cdn.staticaly.com/gh/WangShiSuiFeng24/picx-images-hosting@master/20230807/image.1oqer6reup34.webp" width=10%>
+
+<h2 id="九、Markdown表格"><a href="#九、Markdown表格" class="headerlink" title="九、Markdown表格"></a>九、Markdown表格</h2><p>Markdown制作表格使用|来分隔不同的单元格，使用-来分隔表头和其他行。</p>
+<p><strong>语法格式：</strong></p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">|表头1|表头2|</span><br><span class="line">|----|----|</span><br><span class="line">|单元格11|单元格12|</span><br><span class="line">|单元格21|单元格22|</span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th>表头1</th>
+<th>表头2</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>—-</td>
+<td>—-</td>
+</tr>
+</tbody></table>
+<p><strong>9.1 对齐方式</strong></p>
+<p>可以设置表头的对齐方式：</p>
+<ul>
+<li>-: 设置内容或标题栏右对齐</li>
+<li>:- 设置内容或标题栏左对齐</li>
+<li>:-: 设置内容或标题栏居中对齐</li>
+</ul>
+<p><strong>语法格式：</strong></p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">|左对齐|居中对齐|右对齐|</span><br><span class="line">|:----|:----:|----:|</span><br><span class="line">|单元格11|单元格12|单元格13|</span><br><span class="line">|单元格21|单元格22|单元格23|</span><br></pre></td></tr></table></figure>
+
+<h2 id="十、Markdown高级技巧"><a href="#十、Markdown高级技巧" class="headerlink" title="十、Markdown高级技巧"></a>十、Markdown高级技巧</h2><p>支持的HTML元素</p>
+<p>不在Markdown涵盖范围之类的标签，都可以直接在文档里面用HTML撰写。</p>
+<p>如：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">使用<span class="tag">&lt;<span class="name">kbd</span>&gt;</span>Ctrl<span class="tag">&lt;/<span class="name">kbd</span>&gt;</span>+<span class="tag">&lt;<span class="name">kbd</span>&gt;</span>Alt<span class="tag">&lt;/<span class="name">kbd</span>&gt;</span>+<span class="tag">&lt;<span class="name">kbd</span>&gt;</span>Del<span class="tag">&lt;/<span class="name">kbd</span>&gt;</span>重启电脑</span><br></pre></td></tr></table></figure>
+
+<p>显示效果如下：</p>
+<p>使用<kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>Del</kbd>重启电脑</p>
+<p><strong>10.1 转义</strong></p>
+<p>Markdown使用了很多特殊符号来表示特定的意义，如果需要显示特定的符号则需要使用转义字符，Markdown使用反斜杠转义特殊字符：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">**文本加粗**</span><br><span class="line">\*\*正常显示星号\*\*</span><br></pre></td></tr></table></figure>
+
+<p>显示效果：</p>
+<p><strong>文本加粗</strong></p>
+<p>**正常显示星号**</p>
+<p>Markdown支持一下这些符号前面加上反斜杠来帮助插入普通符号：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">\	反斜线</span><br><span class="line">`	反引号</span><br><span class="line">*	星号</span><br><span class="line">_	下划线</span><br><span class="line">&#123;&#125;	花括号</span><br><span class="line">[]	方括号</span><br><span class="line">()	小括号</span><br><span class="line">+	加号</span><br><span class="line">-	减号</span><br><span class="line">.	英文句点</span><br><span class="line">!	感叹号</span><br></pre></td></tr></table></figure>
+
+<p><strong>10.2 数学公式</strong></p>
+<p>当你需要在编辑器中插入数学公式时，可以使用两个美元符 $$ 包裹 TeX 或 LaTeX 格式的数学公式来实现。</p>
+<p>示例如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$$</span><br><span class="line">\int_0^1 &#123;x^2&#125; \,&#123;\rm d&#125;x</span><br><span class="line">$$</span><br></pre></td></tr></table></figure>
+
+<p>显示效果：<br>$$<br>\int_0^1 {x^2} ,{\rm d}x<br>$$</p>
+
       
 
       
