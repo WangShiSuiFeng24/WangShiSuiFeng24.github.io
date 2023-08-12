@@ -399,8 +399,12 @@
 </tr>
 </thead>
 <tbody><tr>
-<td>—-</td>
-<td>—-</td>
+<td>单元格11</td>
+<td>单元格12</td>
+</tr>
+<tr>
+<td>单元格21</td>
+<td>单元格22</td>
 </tr>
 </tbody></table>
 <p><strong>9.1 对齐方式</strong></p>
@@ -413,6 +417,25 @@
 <p><strong>语法格式：</strong></p>
 <figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">|左对齐|居中对齐|右对齐|</span><br><span class="line">|:----|:----:|----:|</span><br><span class="line">|单元格11|单元格12|单元格13|</span><br><span class="line">|单元格21|单元格22|单元格23|</span><br></pre></td></tr></table></figure>
 
+<table>
+<thead>
+<tr>
+<th align="left">左对齐</th>
+<th align="center">居中对齐</th>
+<th align="right">右对齐</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">单元格11</td>
+<td align="center">单元格12</td>
+<td align="right">单元格13</td>
+</tr>
+<tr>
+<td align="left">单元格21</td>
+<td align="center">单元格22</td>
+<td align="right">单元格23</td>
+</tr>
+</tbody></table>
 <h2 id="十、Markdown高级技巧"><a href="#十、Markdown高级技巧" class="headerlink" title="十、Markdown高级技巧"></a>十、Markdown高级技巧</h2><p>支持的HTML元素</p>
 <p>不在Markdown涵盖范围之类的标签，都可以直接在文档里面用HTML撰写。</p>
 <p>如：</p>
@@ -573,9 +596,25 @@
     <article id="post-centos7 使用hexo框架搭建博客成功" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2023/08/04/centos7%20%E4%BD%BF%E7%94%A8hexo%E6%A1%86%E6%9E%B6%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E6%88%90%E5%8A%9F/">centos7 使用hexo框架搭建博客成功</a>
+    </h1>
+  
+
+        
+        <a href="/2023/08/04/centos7%20%E4%BD%BF%E7%94%A8hexo%E6%A1%86%E6%9E%B6%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E6%88%90%E5%8A%9F/" class="archive-article-date">
+  	<time datetime="2023-08-04T12:44:11.741Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-08-04</time>
+</a>
+        
+      </header>
+    
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="centos7-使用hexo框架搭建博客成功"><a href="#centos7-使用hexo框架搭建博客成功" class="headerlink" title="centos7 使用hexo框架搭建博客成功"></a>centos7 使用hexo框架搭建博客成功</h1><p>1、安装git<br>    yum install git -y<br>2、使用wget下载nodejs 16.15.0版本的压缩包<br>    wget <a target="_blank" rel="noopener" href="https://nodejs.org/dist/v16.15.0/node-v16.15.0-linux-x64.tar.gz">https://nodejs.org/dist/v16.15.0/node-v16.15.0-linux-x64.tar.gz</a><br>3、解压缩node-v16.15.0到当前文件夹<br>    tar -zxvf node-v16.15.0-linux-x64.tar.gz<br>4、移动解压后的node-v16.15.0到&#x2F;urs&#x2F;local&#x2F;bin 目录下，并改名为node<br>    mv node-v16.15.0-linux-x64 &#x2F;usr&#x2F;local&#x2F;bin<br>    cd &#x2F;usr&#x2F;local&#x2F;bin<br>    mv node-v16.15.0-linux-x64 node<br>5、更改环境变量<br>    vim &#x2F;etc&#x2F;profile<br>    末尾添加：<br>        export NODE_HOME&#x3D;&#x2F;usr&#x2F;local&#x2F;bin&#x2F;node<br>        export PATH&#x3D;$PATH:$NODE_HOME&#x2F;bin<br>6、更新环境变量<br>    source &#x2F;etc&#x2F;profile<br>7、检查node、npm是否安装配置成功<br>    node -v<br>    npm -v<br>8、使用npm安装cnpm<br>    npm install -g cnpm –registry&#x3D;<a target="_blank" rel="noopener" href="https://registry.npm.taobao.org/">https://registry.npm.taobao.org</a><br>    cnpm -v<br>9、使用cnpm安装hexo<br>    cnpm install -g hexo-cli<br>    hexo -v<br>10、开始使用hexo框架，初始化博客目录<br>    cd ~<br>    mkdir blog<br>    cd blog<br>    hexo init<br>11、需要防火墙打开4000端口<br>    firewall-cmd –zone&#x3D;public –add-port&#x3D;4000&#x2F;tcp –permanent<br>    firewall-cmd –reload<br>12、启动hexo服务，恭喜你成功搭建成功<br>    hexo s</p>
+        <hr>
+<h1 id="centos7-使用hexo框架搭建博客成功"><a href="#centos7-使用hexo框架搭建博客成功" class="headerlink" title="centos7 使用hexo框架搭建博客成功"></a>centos7 使用hexo框架搭建博客成功</h1><p>1、安装git<br>    yum install git -y<br>2、使用wget下载nodejs 16.15.0版本的压缩包<br>    wget <a target="_blank" rel="noopener" href="https://nodejs.org/dist/v16.15.0/node-v16.15.0-linux-x64.tar.gz">https://nodejs.org/dist/v16.15.0/node-v16.15.0-linux-x64.tar.gz</a><br>3、解压缩node-v16.15.0到当前文件夹<br>    tar -zxvf node-v16.15.0-linux-x64.tar.gz<br>4、移动解压后的node-v16.15.0到&#x2F;urs&#x2F;local&#x2F;bin 目录下，并改名为node<br>    mv node-v16.15.0-linux-x64 &#x2F;usr&#x2F;local&#x2F;bin<br>    cd &#x2F;usr&#x2F;local&#x2F;bin<br>    mv node-v16.15.0-linux-x64 node<br>5、更改环境变量<br>    vim &#x2F;etc&#x2F;profile<br>    末尾添加：<br>        export NODE_HOME&#x3D;&#x2F;usr&#x2F;local&#x2F;bin&#x2F;node<br>        export PATH&#x3D;$PATH:$NODE_HOME&#x2F;bin<br>6、更新环境变量<br>    source &#x2F;etc&#x2F;profile<br>7、检查node、npm是否安装配置成功<br>    node -v<br>    npm -v<br>8、使用npm安装cnpm<br>    npm install -g cnpm –registry&#x3D;<a target="_blank" rel="noopener" href="https://registry.npm.taobao.org/">https://registry.npm.taobao.org</a><br>    cnpm -v<br>9、使用cnpm安装hexo<br>    cnpm install -g hexo-cli<br>    hexo -v<br>10、开始使用hexo框架，初始化博客目录<br>    cd ~<br>    mkdir blog<br>    cd blog<br>    hexo init<br>11、需要防火墙打开4000端口<br>    firewall-cmd –zone&#x3D;public –add-port&#x3D;4000&#x2F;tcp –permanent<br>    firewall-cmd –reload<br>12、启动hexo服务，恭喜你成功搭建成功<br>    hexo s</p>
 
       
 
